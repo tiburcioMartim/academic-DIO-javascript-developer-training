@@ -14,32 +14,33 @@ IMC em adultos Condição:
 - Acima de 40: Obesidade Grave;
 */
 
-//Calcula o IMC e retorna o valor dentro da function typeImc()
+//Calcula o IMC e retorna o valor
 function calculatorImc(w, h) {
-    vImc = w / Math.pow(h, 2);
-    return typeImc(vImc.toFixed(2));
+    return w / Math.pow(h, 2);
 }
 
-//Retorna o tipo de IMC 
+//Retorna o tipo de IMC com mensagem personalizada para a situação
 function typeImc(vImc) {
     if (vImc < 18.5) {
-        return `IMC ${vImc}, está abaixo de 18.5: Abaixo do peso`;
+        return `\n\nIMC ${vImc} \nEstá abaixo de 18.5: \nAbaixo do peso\n\n`;
 
     } else if (vImc >= 18.5 && vImc <= 25) {
-        return `IMC ${vImc}, está entre 18.5 e 25: Peso normal`;
+        return `\n\nIMC ${vImc} \nEstá entre 18.5 e 25: \nPeso normal\n\n`;
 
     } else if (vImc >= 25 && vImc <= 30) {
-        return `IMC ${vImc}, está entre 25 e 30: Acima do peso`;
+        return `\n\nIMC ${vImc} \nEstá entre 25 e 30: \nAcima do peso\n\n`;
 
     } else if (vImc >= 30 && vImc <= 40) {
-        return `IMC ${vImc}, está entre 30 e 40: Obeso`;
+        return `\n\nIMC ${vImc} \nEstá entre 30 e 40: \nObeso\n\n`;
 
     } else {
-        return `IMC ${vImc}, está acima de 40: Obesidade Grave`;
+        return `\n\nIMC ${vImc} \nEstá acima de 40: \nObesidade Grave\n\n`;
     };
 };
 
-const weight = 74;
-const height = 1.71;
+(function () {
+    const weight = 74;
+    const height = 1.71;
 
-console.log(calculatorImc(weight, height));
+    console.log(typeImc(calculatorImc(weight, height).toFixed(2)));
+})();
