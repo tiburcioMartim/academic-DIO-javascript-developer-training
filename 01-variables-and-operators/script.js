@@ -10,11 +10,16 @@ Você terá 3 variaveis. Sendo elas:
 
 
  */
-
+//preço combustível
  let fuelPrice = 4.15
+
+ //média combustível consumo
  let averageFuelConsumption = 0.05
+
+ //km distância
  let kmDistance = 110
 
+ //resultado
  let result = (kmDistance * averageFuelConsumption) * fuelPrice
 
  console.log(result.toFixed(2))
