@@ -9,26 +9,25 @@ Classificação:
 - Média acima de 7, aprovado: passou de semestre;
 */
 
-let note = [
-    {
-        noteOne: '5',
-        noteTwo: '3',
-        noteThree: '7'
-    }
-];
+const note =
+{
+    noteOne: '8',
+    noteTwo: '8',
+    noteThree: '8'
+}
 
-note[0].noteOne = parseInt(note[0].noteOne, 10);
-note[0].noteTwo = parseInt(note[0].noteTwo, 10);
-note[0].noteThree = parseInt(note[0].noteThree, 10);
+note.noteOne = parseInt(note.noteOne, 10);
+note.noteTwo = parseInt(note.noteTwo, 10);
+note.noteThree = parseInt(note.noteThree, 10);
 
-let average = ((note[0].noteOne + note[0].noteTwo + note[0].noteThree) / 3).toFixed(2);
+const average = ((note.noteOne + note.noteTwo + note.noteThree) / 3).toFixed(2);
 
-if(average < 5){
+if (average < 5) {
     console.log(`Média ${average}, reprovado`);
 
-} else if (average >= 5 && average <= 7){
+} else if (average >= 5 && average <= 7) {
     console.log(`Média ${average}, recuperação`);
-    
+
 } else {
     console.log(`Média ${average}, aprovado: passou de semestre`);
 };

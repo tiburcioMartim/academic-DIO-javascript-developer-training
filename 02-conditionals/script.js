@@ -13,20 +13,20 @@ Você terá 5 variáveis. Sendo elas:
 Imprima no console o valor que será gasto para realizar esta viagem.
 */
 
-let fuelPriceEtanol = 5.10;
-let fuelPriceGasolina = 5.89;
-let isfuelMyCar = 'etanol'; //etanol  //gasolina
-let fuelPerKm = 0.05;
-let distanceTripKm = 100;
+const fuelPriceEtanol = 5.10;
+const fuelPriceGasolina = 5.89;
+const isfuelMyCar = 'etanol'; //etanol  //gasolina
+const fuelPerKm = 0.05;
+const distanceTripKm = 100;
 
-let spentFuel = distanceTripKm * fuelPerKm;
+const spentFuel = distanceTripKm * fuelPerKm;
 
 if (isfuelMyCar === 'gasolina') {
-    let result = spentFuel * fuelPriceGasolina
+    const result = spentFuel * fuelPriceGasolina
     console.log(result)
 
 } else if (isfuelMyCar === 'etanol') {
-    let result = spentFuel * fuelPriceEtanol
+    const result = spentFuel * fuelPriceEtanol
     console.log(result)
 
 } else {
